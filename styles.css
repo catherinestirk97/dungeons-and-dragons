@@ -1,6 +1,7 @@
 body {
     margin:0;
     padding:0;
+    font-family: 'Merriweather', serif;
 }
 
 .container {
@@ -40,6 +41,7 @@ li, a{
 .nav_links li {
     display:inline-block;
     padding:0px 20px;
+    font-size:14px;
 }
 
 .nav_links li a {
@@ -47,5 +49,27 @@ li, a{
 }
 
 .nav_links li a:hover {
-    color: #0088A9;
+    color: gold;
+}
+
+.header-container {
+    /* background-color:white; */
+    margin-right:20%;
+    margin-left:20%;
+    margin-top:13%;
+}
+
+.header-container h1 {
+    font-size:90px;
+    font-family: 'Grenze Gotisch', cursive;
+    color:goldenrod;
+    text-shadow: 2px 2px 8px black;
+    margin:0;
+}
+
+.header-container h3 {
+    font-size:16px;
+    color: silver;
+    margin-top:2%;
+    text-shadow: 2px 2px 8px black;
 }
