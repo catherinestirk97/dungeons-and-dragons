@@ -115,3 +115,8 @@ background-color:#016295;
 #bottomButton {
     background-color:#136843
 }
+
+#generatedEncounter {
+    font-size: 25px;
+    font-style:italic;
+}
