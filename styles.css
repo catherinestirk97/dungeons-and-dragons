@@ -4,6 +4,7 @@ body {
     font-family: 'Merriweather', serif;
 }
 
+
 .container {
     position: relative;
     height:100vh;
@@ -72,4 +73,45 @@ li, a{
     color: silver;
     margin-top:2%;
     text-shadow: 2px 2px 8px black;
+}
+
+
+/* randomEncounters page  */
+
+.content-container {
+    background-color:rgba(210, 215, 211, 0.6);
+    margin-top:5%;
+    margin-right:15%;
+    margin-left:15%;
+    padding:2%;
+}
+
+.content-container h1 {
+    font-family: 'Grenze Gotisch', cursive;
+    color:goldenrod;
+    text-shadow: 2px 2px 8px black;
+    font-size:60px;
+    margin:0;
+}
+
+.btnStyle {
+    font-family: 'Merriweather', serif;
+    display:block;
+    margin:15px auto;
+    border:none;
+    border-radius:50px;
+    padding:10px;
+}
+
+#topButton {
+    margin-top:30px;
+    background-color: #bb1e39;
+}
+
+#middleButton{
+background-color:#016295;
+}
+
+#bottomButton {
+    background-color:#136843
 }
