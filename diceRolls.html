@@ -21,30 +21,133 @@
          </header>
         <div class="content-container">
             <h1>Dice Roll Generator</h1>
+            <p>NB: With advantage/disadvantage will automatically roll two dice and choose the higher/lower value.</p>
             <div class="grid-container">
                 <div class="grid-item">
                     <h1>d4</h1>
-                    <button>Click to Roll</button>
+                    <label for="d4">How many d4 to roll?</label>
+                    <select id="d4">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <button id="firstButton" onclick="rollDice4()"">Click to Roll</button>
+                    <span style="display:block">
+                    <button onclick="d4WithAdvantage()">With Advantage</button>
+                    <button onclick="d4WithDisadvantage()">With Disadvantage</button>
+                    </span>
                 </div>
                 <div class="grid-item">
                     <h1>d6</h1>
+                    <label for="d6">How many d6 to roll?</label>
+                    <select id="d6">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
                     <button>Click to Roll</button>
+                    <span style="display:block">
+                        <button onclick="d6WithAdvantage()">With Advantage</button>
+                        <button onclick="d6WithDisadvantage()">With Disadvantage</button>
+                        </span>
                 </div>
                 <div class="grid-item">
                     <h1>d8</h1>
+                    <label for="d8">How many d8 to roll?</label>
+                    <select id="d8">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
                     <button>Click to Roll</button>
+                    <span style="display:block">
+                        <button onclick="d8WithAdvantage()">With Advantage</button>
+                        <button onclick="d8WithDisadvantage()">With Disadvantage</button>
+                        </span>
                 </div>
                 <div class="grid-item">
                     <h1>d10</h1>
+                    <label for="d10">How many d10 to roll?</label>
+                    <select id="d10">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
                     <button>Click to Roll</button>
+                    <span style="display:block">
+                        <button onclick="d10WithAdvantage()">With Advantage</button>
+                        <button onclick="d10WithDisadvantage()">With Disadvantage</button>
+                        </span>
                 </div>
                 <div class="grid-item">
                     <h1>d12</h1>
+                    <label for="d12">How many d12 to roll?</label>
+                    <select id="d12">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
                     <button>Click to Roll</button>
+                    <span style="display:block">
+                        <button onclick="d12WithAdvantage()">With Advantage</button>
+                        <button onclick="d12WithDisadvantage()">With Disadvantage</button>
+                        </span>
                 </div>
                 <div class="grid-item">
                     <h1>d20</h1>
+                    <label for="d20">How many d20 to roll?</label>
+                    <select id="d20">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
                     <button>Click to Roll</button>
+                    <span style="display:block">
+                        <button onclick="d20WithAdvantage()">With Advantage</button>
+                        <button onclick="d20WithDisadvantage()">With Disadvantage</button>
+                        </span>
                 </div>
             </div>
         </div>
