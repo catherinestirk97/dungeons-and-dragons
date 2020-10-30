@@ -94,6 +94,10 @@ li, a{
     margin:0;
 }
 
+.content-container p {
+    margin:0;
+}
+
 .btnStyle {
     font-family: 'Merriweather', serif;
     display:block;
@@ -119,12 +123,13 @@ background-color:#016295;
     font-size: 20px;
     font-style:italic;
     margin:0;
+    padding:7px;
 }
 .grid-container {
     display: grid;
     grid-column-gap: 20px;
     grid-template-columns: auto auto auto;
-    padding: 10px;
+    /* padding: 10px; */
   }
   
   .grid-item {
