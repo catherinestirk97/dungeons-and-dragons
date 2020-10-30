@@ -1,8 +1,72 @@
+const d4dropDownBox = document.getElementById("d4");
+const d6dropDownBox = document.getElementById("d6");
+const d8dropDownBox = document.getElementById("d8");
+const d10dropDownBox = document.getElementById("d10");
+const d12dropDownBox = document.getElementById("d12");
+const d20dropDownBox = document.getElementById("d20");
+
 let resultsArray = [];
 
 function clearArray() {
     resultsArray =[];
 }
+
+function callXtimes(){
+    for(i=0; i < xValue; i++){
+        rollDice();
+    }
+}
+
+
+function rollDice(diceNumber){
+    diceNumber = this.diceNumber;
+    let result = Math.floor(Math.random()* diceNumber +1);
+    resultsArray.push(result);
+    alert(`You rolled a ${resultsArray}`);
+    clearArray();
+}
+
+const d4 = {
+    diceNumber:4
+}
+
+const d6 = {
+    diceNumber:6
+}
+
+const d8 = {
+    diceNumber:8
+}
+
+const d10 = {
+    diceNumber:10
+}
+
+function rolld4() {
+d4.rollDice = rollDice;
+d4.rollDice();
+}
+
+function rolld6() {
+    d6.rollDice = rollDice;
+    d6.rollDice();
+}
+
+function rolld8(){
+    d8.rollDice = rollDice;
+    d8.rollDice();
+}
+
+function rolld10(){
+    d10.rollDice = rollDice;
+    d10.rollDice();
+}
+
+// let resultsArray = [];
+
+// function clearArray() {
+//     resultsArray =[];
+// }
 
 // function rollDice4() {
 //     let dropDownBox = document.getElementById("d4");
@@ -43,48 +107,4 @@ function clearArray() {
 //     }
 //     clearArray();
 // }
-
-
-
-function rollDice(diceNumber){
-    diceNumber = this.diceNumber
-    alert(Math.floor(Math.random()* diceNumber +1));
-}
-
-const d4 = {
-    diceNumber:4
-}
-
-const d6 = {
-    diceNumber:6
-}
-
-const d8 = {
-    diceNumber:8
-}
-
-const d10 = {
-    diceNumber:10
-}
-
-function rolld4() {
-d4.rollDice = rollDice;
-d4.rollDice();
-}
-
-function rolld6() {
-    d6.rollDice = rollDice;
-    d6.rollDice();
-}
-
-function rolld8(){
-    d8.rollDice = rollDice;
-    d8.rollDice();
-}
-
-function rolld10(){
-    d10.rollDice = rollDice;
-    d10.rollDice();
-}
-
 
