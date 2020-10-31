@@ -1,37 +1,33 @@
-const d4dropDownBox = document.getElementById("d4");
-const d6dropDownBox = document.getElementById("d6");
-const d8dropDownBox = document.getElementById("d8");
-const d10dropDownBox = document.getElementById("d10");
-const d12dropDownBox = document.getElementById("d12");
-const d20dropDownBox = document.getElementById("d20");
-
 let resultsArray = [];
+
 
 function clearArray() {
     resultsArray =[];
 }
 
-function callXtimes(){
-    for(i=0; i < xValue; i++){
-        rollDice();
-    }
-}
-
 
 function rollDice(diceNumber){
-    diceNumber = this.diceNumber;
     let result = Math.floor(Math.random()* diceNumber +1);
     resultsArray.push(result);
     alert(`You rolled a ${resultsArray}`);
+}
+
+function callXtimes(value, diceNumber, func){
+    console.log(value, diceNumber);
+    for(i=0; i <value; i++){
+        func(diceNumber);
+    }
     clearArray();
 }
 
 const d4 = {
-    diceNumber:4
+   diceNumber:4,
+    value: 2
 }
 
 const d6 = {
-    diceNumber:6
+    diceNumber:6,
+    value:3
 }
 
 const d8 = {
@@ -44,12 +40,23 @@ const d10 = {
 
 function rolld4() {
 d4.rollDice = rollDice;
-d4.rollDice();
+
+// d4.rollDice();
+// console.log(d4.value);
+// d4.callXtimes = callXtimes;
+// d4.callXtimes(d4.value, rollDice)
+d4.callXtimes = callXtimes;
+//d4.callXtimes(d4.value,d4.diceNumber);
+d4.callXtimes(d4.value,d4.diceNumber,d4.rollDice);
+//bar(function(){ foo("Hello World!") });
+
 }
 
 function rolld6() {
     d6.rollDice = rollDice;
-    d6.rollDice();
+    // d6.rollDice();
+    d6.callXtimes = callXtimes;
+    d6.callXtimes(d6.value, d6.diceNumber, d6.rollDice);
 }
 
 function rolld8(){
@@ -61,12 +68,13 @@ function rolld10(){
     d10.rollDice = rollDice;
     d10.rollDice();
 }
-
 // let resultsArray = [];
 
 // function clearArray() {
 //     resultsArray =[];
 // }
+
+
 
 // function rollDice4() {
 //     let dropDownBox = document.getElementById("d4");
