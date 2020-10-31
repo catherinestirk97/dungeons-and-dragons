@@ -9,7 +9,7 @@ function clearArray() {
 function rollDice(diceNumber){
     let result = Math.floor(Math.random()* diceNumber +1);
     resultsArray.push(result);
-    alert(`You rolled a ${resultsArray}`);
+    return resultsArray;
 }
 
 function callXtimes(value, diceNumber, func){
@@ -17,6 +17,7 @@ function callXtimes(value, diceNumber, func){
     for(i=0; i <value; i++){
         func(diceNumber);
     }
+    alert(`You rolled a ${resultsArray}`);
     clearArray();
 }
 
