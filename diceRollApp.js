@@ -35,12 +35,12 @@ function rollDice(diceNumber){
 
 //callXtimes function will call the rollDice function the number of times the user has selected from the dropdown box
 function callXtimes(value, diceNumber, func){
+    clearArray();
     console.log(value, diceNumber);
     for(i=0; i <value; i++){
         func(diceNumber);
     }
     alert(`You rolled a ${resultsArray}`);
-    clearArray();
 }
 
 function clearArray() {
@@ -143,4 +143,30 @@ function getd20DropdownResult(){
     let d20dropdownResult = parseInt(d20dropdown.value);
     console.log(d20dropdownResult);
     return d20dropdownResult;
+}
+
+function withAdvantage(diceNumber){
+    console.log(diceNumber.diceNumber)
+       rollDice(diceNumber.diceNumber);
+       rollDice(diceNumber.diceNumber);
+        console.log(resultsArray);
+        if(resultsArray[0]>= resultsArray[1]){
+            alert("You rolled: " + resultsArray + ". " + "Because of advantage, you use the " + resultsArray[0] + ".");
+        } else {
+            alert("You rolled: " + resultsArray + ". " + "Because of advantage, you use the " + resultsArray[1] + ".");
+        }
+        clearArray();
+    }
+
+function withDisadvantage(diceNumber) {
+    console.log(diceNumber.diceNumber)
+    rollDice(diceNumber.diceNumber);
+    rollDice(diceNumber.diceNumber);
+    console.log(resultsArray);
+    if (resultsArray[0] >= resultsArray[1]) {
+        alert("You rolled: " + resultsArray + ". " + "Because of disadvantage, you use the " + resultsArray[1] +".");
+    } else {
+        alert("You rolled: " + resultsArray + ". " + "Because of disadvantage, you use the " + resultsArray[0] + ".");
+    }
+    clearArray();
 }
