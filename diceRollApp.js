@@ -21,9 +21,16 @@ function callXtimes(value, diceNumber, func){
     clearArray();
 }
 
+function getDropdownResult(){
+//making value equal to what the user selects from the dropdown box
+    let d4dropdown = document.getElementById("d4");
+    let d4dropdownResult = parseInt(d4dropdown.value);
+    console.log(d4dropdownResult);
+    return d4dropdownResult;
+}
+
 const d4 = {
-   diceNumber:4,
-    value: 2
+   diceNumber:4
 }
 
 const d6 = {
@@ -41,7 +48,8 @@ const d10 = {
 
 function rolld4() {
 d4.rollDice = rollDice;
-
+d4.getDropdownResult = getDropdownResult;
+d4.value = d4.getDropdownResult();
 // d4.rollDice();
 // console.log(d4.value);
 // d4.callXtimes = callXtimes;
