@@ -147,6 +147,7 @@ function getd20DropdownResult(){
 
 //uses destructuring to take object with a set dice number, rolls this twice then works out the higher of the two numbers.
 function withAdvantage(obj){
+    clearArray();
     console.log(obj.diceNumber)
        rollDice(obj.diceNumber);
        rollDice(obj.diceNumber);
@@ -156,11 +157,11 @@ function withAdvantage(obj){
         } else {
             alert("You rolled: " + resultsArray + ". " + "Because of advantage, you use the " + resultsArray[1] + ".");
         }
-        clearArray();
     }
 
 //like advantage except it takes the lower number
 function withDisadvantage(obj) {
+    clearArray();
     console.log(obj.diceNumber)
     rollDice(obj.diceNumber);
     rollDice(obj.diceNumber);
@@ -170,5 +171,5 @@ function withDisadvantage(obj) {
     } else {
         alert("You rolled: " + resultsArray + ". " + "Because of disadvantage, you use the " + resultsArray[0] + ".");
     }
-    clearArray();
+
 }
