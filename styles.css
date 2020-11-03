@@ -125,6 +125,9 @@ background-color:#016295;
     margin:0;
     padding:7px;
 }
+
+/* have grid when screen is full size, otherwise stack items on top of each other */
+@media screen and (min-width:800px){
 .grid-container {
     display: grid;
     grid-column-gap: 20px;
@@ -136,6 +139,7 @@ background-color:#016295;
     padding: 5px;
 
   }
+}
 
   .imgStyle {
       width:250px;
@@ -145,4 +149,97 @@ background-color:#016295;
 .grid-item h1 {
     font-size:40px;
     color:silver;
+}
+
+/* dice roll page */
+.grid-container span {
+    display:block;
+}
+
+.diceButton {
+    padding:3px 5px;
+    border:1px solid goldenrod;
+    border-radius:25px;
+    margin:5px;
+    font:inherit;
+    font-size:13px;
+    background-color:whitesmoke;
+}
+
+.diceButton:hover {
+    background-color:goldenrod;
+    cursor: pointer;
+}
+
+
+/* mobile responsiveness */
+@media screen and (max-width:480px) {
+    .container {
+        padding-bottom:5%;
+    }
+
+    .header-container h1 {
+        padding-top:15%;
+        font-size:60px;
+    }
+
+    .header-container h3 {
+        padding-top:30%;
+        padding-bottom:40%;
+    }
+
+    .content-container {
+        margin-left:5%;
+        margin-right:5%;
+    }
+
+    .content-container h1 {
+        font-size:40px;
+    }
+
+    .content-container p {
+        font-size:12px;
+    }
+
+    #generatedEncounter {
+        font-size:14px;
+        font-weight:bold;
+    }
+
+    .mobile-container {
+        height:100%;
+    }
+
+    .nav_links li {
+        padding: 0px 15px;
+    }
+
+}
+
+/* half-screen responsiveness */
+@media screen and (min-width:481px) and (max-width:900px) {
+    .mobile-container {
+        height:100%;
+    } 
+    .content-container {
+        margin-right:7%;
+        margin-left:5%;
+    } 
+    .container {
+        padding-bottom:5%;
+    } 
+
+    .header-container h1 {
+        padding-top:15%;
+        font-size:60px;
+    }
+
+    .content-container h1 {
+        font-size:40px;
+    }
+
+    .content-container p {
+        font-size:14px;
+    }
+
 }
